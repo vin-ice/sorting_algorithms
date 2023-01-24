@@ -35,6 +35,9 @@ void cocktail_sort_list(listint_t **list)
     listint_t *node;
     bool swapped;
 
+    if (!list || !(*list) || !(*list)->next)
+        return;
+        
     do
     {
         swapped = false;
