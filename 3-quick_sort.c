@@ -25,11 +25,11 @@ int partition(int *array, int lo, int hi, size_t size)
 {
     int pivot, i, j;
 
-    pivot = *(array + hi);/**last element*/
+    pivot = array[hi];/**last element*/
 
     for (i = lo - 1, j = lo; j < hi; j++)
     {
-        if (*(array + j) <= pivot)
+        if (array[j] <= pivot)
         {
             i += 1;
             swap((array + i), (array + j));
