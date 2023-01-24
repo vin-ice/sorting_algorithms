@@ -96,6 +96,9 @@ void merge_sort(int *array, size_t size)
 {
     int *out;
 
+    if (size < 2 || !array)
+		return;
+        
     out = malloc(sizeof(int) * size - 1);
     if (out == NULL)
         return;
